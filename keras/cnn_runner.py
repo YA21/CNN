@@ -1,8 +1,7 @@
 from network.simple_cnn import cnn_network
 from utils.preprocess import preprocess
+from utils.manage_callbacks import manage_callbacks
 from sklearn.model_selection import train_test_split
-from keras.callbacks import ModelCheckpoint, EarlyStopping, TensorBoard
-from datetime import datetime
 
 import argparse
 import os
@@ -40,22 +39,7 @@ if __name__ == '__main__':
                         optimizer=config['model']['optimizer'])
 
     # add callbacks
-    callbacks = []
-
-    if config['train']['checkpoint_interval'] != -1:
-        checkpoint = ModelCheckpoint(os.path.join(output_dir, 'checkpoint.h5'),
-                                     monitor='val_loss',
-                                     verbose=1,
-                                     period=config['train']['checkpoint_interval'])
-        callbacks.append(checkpoint)
-
-    if config['train']['early_stopping'] is True:
-        callbacks.append(EarlyStopping(monitor='val_loss', patience=0))
-
-    if config['train']['tensorboard'] is True:
-        log_dir = os.path.join('./tflog', datetime.today().strftime('%Y%m%d_%H%M%S'))
-        tensorboard = TensorBoard(log_dir=log_dir, write_images=True)
-        callbacks.append(tensorboard)
+    callbacks = manage_callbacks(config, output_dir)
 
     # train model
     model.fit(X_train, y_train,
