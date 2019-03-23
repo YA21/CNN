@@ -1,0 +1,5 @@
+- [ArgumentParserの使い方を簡単にまとめた - Qiita](https://qiita.com/kzkadc/items/e4fc7bc9c003de1eb6d0)
+- [最適化 - Keras Documentation](https://keras.io/ja/optimizers/)
+- [コールバック - Keras Documentation](https://keras.io/ja/callbacks/)
+- [最良のモデルを保存する（ModelCheckpointの使い方） - Qiita](https://qiita.com/tom_eng_ltd/items/7ae0814c2d133431c84a)
+- [Stunning Free Images · Pixabay](https://pixabay.com/)
