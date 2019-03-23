@@ -7,6 +7,8 @@ import argparse
 import os
 import yaml
 
+import hoge
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='runner for cnn')
     
