@@ -1,0 +1,11 @@
+model :
+  metrics : ["accuracy"]
+  optimizer : "RMSprop"
+  loss : "categorical_crossentropy"
+
+train :
+  epochs : 20
+  batch_size : 8
+  checkpoint_interval : 5 # -1: don't save checkpoint
+  early_stopping : False
+  tensorboard : True
