@@ -24,4 +24,4 @@ implement CNN by using keras and tensorflow
 > ```
 
 
-3. execute runner (if you want to see help, use h option)
+3. execute runner (if you want to see help, use -h option)
