@@ -1,5 +1,5 @@
 from PIL import Image
-from tf.keras.utils import np_utils
+from keras.utils import np_utils
 
 import numpy as np
 import os, sys
