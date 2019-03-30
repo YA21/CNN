@@ -23,7 +23,7 @@ if __name__ == '__main__':
     config_path = args.config_path
     os.makedirs(output_dir, exist_ok=True)
 
-    # read_config
+    # read config
     with open(config_path, 'r') as f:
         config = yaml.load(f)
 
